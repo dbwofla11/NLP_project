@@ -1,0 +1,4 @@
+interface:
+  display_name: "Session Handoff"
+  short_description: "Import prompts and replies from a selected local Codex session"
+  default_prompt: "Import context from a specific local Codex session and summarize the handoff."
