@@ -1,0 +1,4 @@
+interface:
+  display_name: "Idea JSON"
+  short_description: "Create a project idea JSON record"
+  default_prompt: "Turn this idea or source material into a JSON record following the project's ideas format."

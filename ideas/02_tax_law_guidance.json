@@ -1,0 +1,83 @@
+{
+  "id": "tax_law_guidance",
+  "title": "비전문가의 최신 세법 정보 이해 지원",
+  "source_url": "https://app.notion.com/p/3d994f5130278066a555ce3a57e67109?pvs=204",
+  "analysis": { "status": "완료", "topic_fit": "중", "nlp_difficulty": "중", "market_competitiveness": "하" },
+  "target_users": ["양도 예정 1주택자"],
+  "problem": ["일상어 질문과 세법 전문용어의 간극", "개인 조건에 따라 달라지는 적용 기준", "분산된 법령·판례·해석례"],
+  "validation": "반복 사용 서비스인지와 고객군·손실을 검증",
+  "limitations": ["공식 챗봇과 중복", "세무 책임"],
+  "schema_version": 1,
+  "planning": {
+    "target_users": [
+      "양도 예정 1주택자"
+    ],
+    "problem_definition": "일상어 질문에서 시작해 취득·양도일, 주택 수, 거주기간 등 필수 사실을 정리하고 시행일이 적용되는 공식 세법·해석을 찾기가 어렵다. 일반 세금 문제 전체와 부동산 양도세라는 초기 범위가 섞여 있어 최종 구현은 좁힌다.",
+    "final_scope": "‘1주택 양도 전 체크리스트와 공식 근거 조항 탐색’으로 한정한다. 질문을 필수 사실로 구조화하고 현행 기준일·공식 원문을 보여준다. 세액 계산, 절세 판단, 신고 대행, 세무 자문은 제외한다.",
+    "alternatives": [
+      "국세법령정보시스템·국가법령정보센터",
+      "홈택스 모의계산·생성형 챗봇·126 상담",
+      "세무사·세금 앱",
+      "LBOX·빅케이스·택스넷 등 판례·세무 자료 검색"
+    ],
+    "validation_plan": [
+      "실제 양도세 질문 30건으로 공식 출처 정확성과 빠진 사실을 되묻는 회수율을 비교한다.",
+      "최근 매도 경험자 10명에게 검색 경로와 재확인 횟수를 묻고, 저빈도·고위험의 사건 기반 문제인지 검증한다."
+    ],
+    "risks_and_stop_conditions": [
+      "답변마다 조항·시행일·출처와 기준일을 표시한다.",
+      "불확실하거나 예외가 있으면 세무 상담으로 이관한다.",
+      "‘공식 원문을 연결하는 공백’이 홈택스에서 이미 해결되는지 반증한다."
+    ],
+    "open_questions": [
+      "실제 첫 고객을 매도 예정 1주택자로 고정할지 확인한다.",
+      "질문 정리·근거 탐색이 기존 홈택스 흐름보다 편한지 확인한다."
+    ],
+    "source_urls": [
+      "https://app.notion.com/p/3d994f5130278066a555ce3a57e67109",
+      "https://app.notion.com/p/3d994f513027803f992eff259d3bb042",
+      "https://app.notion.com/p/3d994f51302780c891dbdd7bfc2d242c",
+      "https://app.notion.com/p/3dc94f513027810db677cb19623fb7a8",
+      "https://app.notion.com/p/3dc94f51302781a69cfce870df8a52a3",
+      "https://app.notion.com/p/3de94f5130278115a507e1903bb7b1db"
+    ]
+  },
+  "notion_sources": [
+    {
+      "kind": "idea_page",
+      "title": "비전문가가 최신 세법 기준을 확인하기 어려운 문제",
+      "url": "https://app.notion.com/p/3d994f5130278066a555ce3a57e67109",
+      "content_markdown": "\n### 문제 상황\n사람들이 부동산 세금에 대해 궁금한 점이 있어도 전문적인 세법 용어를 알지 못해 필요한 정보를 찾기 어렵다.\n### 구체적인 문제\n- “집을 팔면 세금이 나오나요?”처럼 일상적인 표현을 사용한다.\n- `양도소득세`, `1세대 1주택`, `일시적 2주택` 같은 전문용어를 모를 수 있다.\n- 주택 수, 취득일, 매도일, 거주 기간에 따라 적용되는 기준이 달라진다.\n- 법령, 판례, 결정례, 세법 해석례가 여러 자료로 나뉘어 있다.\n- 검색 결과가 나와도 자신의 상황과 관련된 내용인지 판단하기 어렵다.\n- 법령이 개정되면 과거 자료와 현재 기준이 달라질 수 있다.\n### 문제의 근거\n- [국세법령정보시스템](https://taxlaw.nts.go.kr/?utm_source=chatgpt.com)에는 법령, 판례, 결정례, 세법 해석례가 구분되어 제공된다.\n- [국세청 국세상담센터](https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?cntntsId=7848&mi=13364&utm_source=chatgpt.com)는 국민들이 세금과 관련해 전문적인 상담을 필요로 한다는 점을 보여준다.\n- 세법은 개인의 주택 수와 날짜 등 여러 조건에 따라 결과가 달라지므로 단순 검색만으로 이해하기 어렵다.\n[시장 분석 및 심층분석 ](https://app.notion.com/p/3d994f513027803f992eff259d3bb042)\n[주제 구체적으로 제한하기 ](https://app.notion.com/p/3d994f51302780c891dbdd7bfc2d242c)\n\n[01. 해결 방식·시장성 검증](https://app.notion.com/p/3dc94f513027810db677cb19623fb7a8)\n[02. 유사 서비스·포지셔닝 검증](https://app.notion.com/p/3dc94f51302781a69cfce870df8a52a3)\n[문제 상황·반복성 시장 검증](https://app.notion.com/p/3de94f5130278115a507e1903bb7b1db)\n"
+    },
+    {
+      "kind": "planning_page",
+      "title": "시장 분석 및 심층분석 ",
+      "url": "https://app.notion.com/p/3d994f513027803f992eff259d3bb042",
+      "content_markdown": "\n## 2번 문제 스토리보드\n※ 실제 지인의 세법 조사 경험을 바탕으로 하되, 개인정보와 구체적인 사건 내용은 제외한 재구성이다.\n<table header-row=\"true\">\n<tr>\n<td>장면</td>\n<td>내용</td>\n<td>발생하는 문제</td>\n</tr>\n<tr>\n<td>1. 조사 시작</td>\n<td>지인이 자신의 세금 문제를 알아보기 위해 인터넷과 정부 자료를 찾기 시작한다.</td>\n<td>세법에 대해 알아야 할 필요는 있지만 어디서부터 찾아야 할지 모른다.</td>\n</tr>\n<tr>\n<td>2. 어려운 용어 등장</td>\n<td>검색 과정에서 양도소득세, 1세대 1주택, 장기보유특별공제, 취득가액 등의 용어를 접한다.</td>\n<td>용어를 몰라 검색어를 정확히 정하기 어렵다.</td>\n</tr>\n<tr>\n<td>3. 일반 검색 시도</td>\n<td>“집을 팔면 세금이 어떻게 되나요?”처럼 일상적인 문장으로 검색한다.</td>\n<td>블로그, 뉴스, 커뮤니티마다 설명과 기준 시점이 다르다.</td>\n</tr>\n<tr>\n<td>4. 정책 변경 확인</td>\n<td>과거에 작성된 글과 최근 자료의 내용이 서로 다르다는 것을 알게 된다.</td>\n<td>어떤 내용이 현재 기준인지, 어느 시점부터 적용되는지 확인하기 어렵다.</td>\n</tr>\n<tr>\n<td>5. 정부 사이트 이용</td>\n<td>국세법령정보시스템과 국가법령정보센터를 이용한다.</td>\n<td>법령, 개정 내용, 판례, 해석례가 여러 메뉴로 나누어져 있어 직접 연결해야 한다.</td>\n</tr>\n<tr>\n<td>6. 최신 판례 탐색</td>\n<td>관련 판례를 찾았지만 판례 제목과 전문용어가 어려워 내용을 이해하기 어렵다.</td>\n<td>최신 판례가 자신의 상황과 어떤 관련이 있는지 판단하기 어렵다.</td>\n</tr>\n<tr>\n<td>7. 자료 비교</td>\n<td>여러 자료의 날짜와 내용을 일일이 비교한다.</td>\n<td>개정 전·후 내용, 현재 시행 여부, 관련 판례를 수작업으로 확인해야 한다.</td>\n</tr>\n<tr>\n<td>8. 조사 중단</td>\n<td>시간이 많이 걸리고 확신이 없어 결국 전문가에게 다시 문의하거나 조사를 포기한다.</td>\n<td>정보는 존재하지만 최신성과 연관성을 직접 확인해야 하는 부담이 크다.</td>\n</tr>\n</table>\n## 핵심 문제\n현재 세법 관련 자료가 없는 것은 아니다. 국세법령정보시스템에는 최신 개정법령, 개정세법 해설, 세법해석례, 판례·결정례가 제공되고 있다. 하지만 자료가 각각 다른 메뉴에 나뉘어 있다. [국세법령정보시스템](https://taxlaw.nts.go.kr/?utm_source=chatgpt.com)\n또한 국가법령정보센터에서는 현행법령, 예정법령, 연혁법령, 신구법 비교 등을 제공하지만, 세법 관련 판례와 해석례까지 하나의 흐름으로 연결해 주지는 않는다. [국가법령정보센터](https://www.law.go.kr/lsSc.do?menuId=1&subMenuId=23&tabMenuId=123&utm_source=chatgpt.com)\n따라서 문제를 다음과 같이 정의할 수 있다.\n> **세법을 조사하는 비전문가는 계속 바뀌는 정책과 법령 속에서 관련 용어, 개정 전·후 내용, 최신 판례와 해석례를 서로 연결해 확인하기 어렵다. 이로 인해 현재 적용되는 기준을 파악하는 데 많은 시간과 노력이 필요하다.**\n## 유사 제품 및 서비스\n<table header-row=\"true\">\n<tr>\n<td>서비스</td>\n<td>제공하는 기능</td>\n<td>해결하는 문제</td>\n<td>아직 남는 문제</td>\n</tr>\n<tr>\n<td>국세법령정보시스템</td>\n<td>최신 개정법령, 세법해석례, 판례·결정례, 개정세법 해설 제공</td>\n<td>공식 세법 자료를 확인할 수 있음</td>\n<td>자료가 메뉴별로 나뉘어 있어 사용자가 직접 연결해야 함</td>\n</tr>\n<tr>\n<td>국가법령정보센터</td>\n<td>현행·예정·연혁 법령, 신구법 비교, 제·개정 이유 제공</td>\n<td>법령의 변경 과정 확인 가능</td>\n<td>세법 판례·해석례와 개인의 관심 주제를 함께 추적하기 어려움</td>\n</tr>\n<tr>\n<td>국세청 개정세법 해설</td>\n<td>연도별 주요 세법 개정 내용 설명</td>\n<td>개정된 정책을 이해하는 데 도움</td>\n<td>특정 사용자가 관심 있는 주제만 계속 추적하는 기능은 제한적</td>\n</tr>\n<tr>\n<td>LBOX</td>\n<td>판례·법령 통합검색, 최신 판례, 유사 판례, AI 요약, 알림 기능 제공</td>\n<td>최신 판례 검색과 판례 비교에 강함</td>\n<td>세법 정책 변화의 전후 과정과 시행일을 중심으로 추적하는 서비스는 아님</td>\n</tr>\n<tr>\n<td>빅케이스</td>\n<td>판례·법령 검색, 서면 검색, 유사 판례, AI 추천</td>\n<td>관련 판례를 찾는 데 도움</td>\n<td>정책 변경의 시간 흐름이나 개정세법 추적에는 한계가 있음</td>\n</tr>\n<tr>\n<td>택스넷·이택스코리아·삼일아이닷컴</td>\n<td>세무 예규·판례, 최신 개정세법, 세무 해설 제공</td>\n<td>세무 전문가용 자료를 찾을 수 있음</td>\n<td>여러 자료가 분산되어 있고 일부 기능은 유료이거나 전문 지식이 필요함</td>\n</tr>\n</table>\n- [LBOX](https://play.google.com/store/apps/details?hl=ko&id=kr.lbox.android&utm_source=chatgpt.com)\n- [빅케이스](https://bigcase.ai/?utm_source=chatgpt.com)\n- [택스넷 예규·판례 검색](https://classic.taxnet.co.kr/sub/yp/tax/yp_Search.asp?nN=2&pN=1&sN=1&utm_source=chatgpt.com)\n- [이택스코리아](https://www.etaxkorea.net/tax/precedent/nts?utm_source=chatgpt.com)\n- [삼일아이닷컴](https://www.samili.com/tax/YeguPanreSearch.asp?utm_source=chatgpt.com)\n## 유사 제품 조사 결과\n**비슷한 서비스는 이미 존재한다.** 따라서 “세법 판례를 검색하는 서비스가 없다”고 주장하면 설득력이 약하다.\n다만 이번 조사에서 확인되는 서비스들은 각각 역할이 나뉘어 있다.\n- 국세법령정보시스템: 공식 자료 제공\n- 국가법령정보센터: 법령 변경 확인\n- LBOX·빅케이스: 판례 검색\n- 택스넷·이택스코리아: 세무 예규와 판례 제공\n즉, 아직 남아 있는 문제는 다음과 같다.\n> **개정세법, 시행일, 관련 판례, 세법 용어와 설명을 하나의 주제별 시간 흐름으로 연결하여 보여주는 기능이 부족하다.**\n"
+    },
+    {
+      "kind": "planning_page",
+      "title": "주제 구체적으로 제한하기 ",
+      "url": "https://app.notion.com/p/3d994f51302780c891dbdd7bfc2d242c",
+      "content_markdown": "\n### 프로젝트 주제\n**개인이 자신의 상황에 맞는 세금과 합법적인 절세 방법을 이해하기 어려운 문제**\n### 타겟\n처음으로 소득을 얻거나, 주식·부동산을 거래하거나, 재산을 물려받으면서 세금을 직접 알아봐야 하는 일반인\n### 핵심 문제\n- 어떤 상황에서 어떤 세금이 발생하는지 알기 어렵다.\n- 세금마다 계산에 필요한 금액, 날짜, 조건이 다르다.\n- 공제, 감면, 비과세 등 합법적인 절세 방법을 찾기 어렵다.\n- 정부정책과 세법이 계속 바뀌어 최신 기준을 확인하기 어렵다.\n- 관련 정보가 여러 정부 사이트와 문서에 나누어져 있다.\n- 자신의 상황에 어떤 절세 항목이 적용되는지 판단하기 어렵다.\n### 최종 문제정의\n> 일반인은 소득을 얻거나, 자산을 거래하거나, 재산을 보유하거나, 가족에게 재산을 이전할 때 어떤 세금이 발생하는지 정확히 알기 어렵다. 또한 세법과 정부정책이 계속 변경되고 공제·감면·비과세 조건도 복잡하기 때문에, 자신의 상황에서 납부해야 할 세금과 합법적으로 확인할 수 있는 절세 방법을 찾는 데 어려움을 겪는다.\n다만 학교 프로젝트에서 **모든 세금을 실제로 계산**하는 것은 너무 크다. 문제는 전체적인 세금과 절세로 잡되, 실제 구현은 몇 가지 대표 상황으로 제한하는 것이 현실적이야.\ni\n"
+    },
+    {
+      "kind": "planning_page",
+      "title": "01. 해결 방식·시장성 검증",
+      "url": "https://app.notion.com/p/3dc94f513027810db677cb19623fb7a8",
+      "content_markdown": "\n## 조사 결론\n세법 이해 수요는 크지만, 국세청의 법령정보·모의계산·생성형 홈택스 챗봇이 이미 존재한다. 개인별 세액을 확정하는 챗봇은 고위험·저차별 영역이다.\n## 기존 해결 방식\n- 국세청 법령정보시스템, 홈택스 모의계산·챗봇, 126/인터넷 상담.\n- 세무사 상담과 상업 세금 앱이 개인 사실관계를 받아 계산·신고를 보조한다.\n## 제안 방식과 시장성\n범위를 **‘1주택 양도 전 체크리스트와 근거 조항 탐색’**으로 제한한다. 일상어 질문을 필수 사실(취득·양도일, 주택 수, 거주기간)로 구조화하고, 시행일이 있는 공식 근거를 보여준다. 계산/절세 판단/신고 대행은 제외한다.\n## 검증 조건\n- RAG 답변마다 법령·국세청 원문과 기준일을 표시한다.\n- 불확실·예외는 상담 연결로 에스컬레이션한다.\n- 법률·세무 자문이 아니라 정보 탐색임을 고지한다.\n## Sources\n[https://taxlaw.nts.go.kr/](https://taxlaw.nts.go.kr/)\n[https://t.nts.go.kr/andong/na/ntt/selectNttInfo.do?bbsId=1028&mi=2201&nttSn=1347979](https://t.nts.go.kr/andong/na/ntt/selectNttInfo.do?bbsId=1028&mi=2201&nttSn=1347979)\n[https://www.nts.go.kr/upload/nts/ebook/sw_1227_j/sw_1227_j/assets/contents/download.pdf](https://www.nts.go.kr/upload/nts/ebook/sw_1227_j/sw_1227_j/assets/contents/download.pdf)\n## 독립 비판 검토 후 보완\n국세청은 양도소득세 자가진단·모의계산과 생성형 홈택스 챗봇을 제공한다. 따라서 개인 세액 답변·절세 조언을 제외하고, 기준일이 표시된 공식 원문 탐색과 누락 사실 질문으로 한정했다.\n- [국세청 생성형 홈택스 챗봇 안내](https://t.nts.go.kr/andong/na/ntt/selectNttInfo.do?bbsId=1028&mi=2201&nttSn=1347979)\n- [국세청 양도소득세 안내](https://www.nts.go.kr/upload/nts/ebook/sw_1227_j/sw_1227_j/assets/contents/download.pdf)\n"
+    },
+    {
+      "kind": "planning_page",
+      "title": "02. 유사 서비스·포지셔닝 검증",
+      "url": "https://app.notion.com/p/3dc94f51302781a69cfce870df8a52a3",
+      "content_markdown": "\n## 경쟁 지형\n- **국세청**: 공식성·최신성 우위, 홈택스 챗봇과 모의계산까지 보유.\n- **세무사/세금 앱**: 맞춤 계산과 신고에 강함.\n- **일반 LLM 검색**: 설명은 쉽지만 최신성·출처·책임성이 약하다.\n## 차별화 가능한 포지셔닝\n‘답을 주는 세무 챗봇’이 아니라 **공식 근거가 붙은 질문 정리·누락 사실 확인기**. 사용자의 일상어를 체크리스트로 바꾸고 해당되는 공식 안내만 인용한다.\n## 반증 가능성\n홈택스 챗봇이 같은 흐름과 근거 제시를 이미 제공한다면 포지셔닝은 약하다. 실제 양도세 질문 30건으로 출처 정확성·누락 질문 회수율을 비교해야 한다.\n## Sources\n[https://taxlaw.nts.go.kr/](https://taxlaw.nts.go.kr/)\n[https://t.nts.go.kr/andong/na/ntt/selectNttInfo.do?bbsId=1028&mi=2201&nttSn=1347979](https://t.nts.go.kr/andong/na/ntt/selectNttInfo.do?bbsId=1028&mi=2201&nttSn=1347979)\n[https://www.nts.go.kr/upload/nts/ebook/sw_1227_j/sw_1227_j/assets/contents/download.pdf](https://www.nts.go.kr/upload/nts/ebook/sw_1227_j/sw_1227_j/assets/contents/download.pdf)\n## 독립 비판 검토 후 보완\n‘공식 원문을 쉬운말과 유효일로 연결하지 못하는 대체재 공백’은 아직 검증되지 않았다. 답변에는 조항·시행일·출처를 표시하고, 예외/판단은 세무 상담으로 보내는 조건을 추가했다.\n"
+    },
+    {
+      "kind": "planning_page",
+      "title": "문제 상황·반복성 시장 검증",
+      "url": "https://app.notion.com/p/3de94f5130278115a507e1903bb7b1db",
+      "content_markdown": "\n## 결론\n**문제 상황: 부분 충족 / 반복성: 제한적 확인.**\n## 구체성\n일상어 질문, 주택 수·취득/양도일·거주기간, 법령 분산이라는 설명은 구체적이다. 그러나 고객이 ‘매도 예정 1주택자’인지 ‘다주택자’인지, 답을 못 찾아 생기는 손실이 무엇인지는 섞여 있다.\n**검증 가설:** 양도 예정 1주택자는 신고/매도 전 공식 기준을 찾을 때 필수 사실을 빠뜨려 추가 확인·상담을 반복한다.\n## 반복성 시장 근거\n국세청이 양도소득세 모의계산·자가진단·상담/챗봇을 제공하는 것은 관련 정보 탐색 수요가 존재함을 보여 준다. 그러나 개인의 주택 매매는 매주 반복되는 과업이 아니라 거래·법 개정 시점에 발생하는 **저빈도·고위험** 문제다.\n## 부족한 점\n- ‘반복 사용 서비스’가 아니라 사건 기반 보조인지 명시할 것.\n- 최근 매도 경험자 10명에게 검색/상담 경로·재확인 횟수를 조사할 것.\n- 세액 판단과 정보 탐색을 분리할 것.\n## Sources\n- [국세청 양도소득세 안내](https://www.nts.go.kr/upload/nts/ebook/sw_1227_j/sw_1227_j/assets/contents/download.pdf)\n- [국세청 생성형 홈택스 챗봇 안내](https://t.nts.go.kr/andong/na/ntt/selectNttInfo.do?bbsId=1028&mi=2201&nttSn=1347979)\n"
+    }
+  ]
+}

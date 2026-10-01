@@ -1,0 +1,68 @@
+{
+  "id": "smishing_detection",
+  "title": "스미싱 의심 문자 탐지",
+  "source_url": "https://app.notion.com/p/3d994f51302780be8c25cb15a6aa4f08?pvs=204",
+  "analysis": { "status": "완료", "topic_fit": "하", "nlp_difficulty": "하", "market_competitiveness": "하" },
+  "problem": ["문자 메시지의 정상·스미싱 의심 여부 판단"],
+  "open_questions": ["대상 사용자", "위험 신호", "피해", "기존 대안"],
+  "validation": "디지털 취약층의 반복 경험과 기존 차단 도구의 미해결 비율 조사",
+  "limitations": ["SMS 권한", "민감정보", "오탐·미탐 위험"],
+  "schema_version": 1,
+  "planning": {
+    "target_users": [
+      "디지털 취약층 (고령층 우선 여부 미정)"
+    ],
+    "problem_definition": "기관·보상·배송을 사칭한 문자의 URL·앱 설치·송금 유도 신호를 이해하지 못해 확인·신고를 미룰 수 있다. 대상과 기존 차단 도구가 해결하지 못하는 비율은 미정이다.",
+    "final_scope": "사용자가 붙여넣은 문자의 위험 문구·URL·사칭 신호를 쉬운 말로 설명하고 KISA/118 확인·신고 경로에 연결한다. 백그라운드 SMS 수집, 자동 차단, ‘안전’ 확정 판정은 제외한다.",
+    "alternatives": [
+      "KISA 보호나라 확인·신고·대응 가이드",
+      "통신사·OS 스팸 필터",
+      "보안 앱의 악성 URL·앱 탐지"
+    ],
+    "validation_plan": [
+      "최신 정상·사기 문자와 난독화 URL 평가셋으로 오탐·미탐을 측정한다.",
+      "설명 이해도와 신고 의도를 평가하고 대상 사용자 및 기존 차단 도구 미사용 이유를 인터뷰한다."
+    ],
+    "risks_and_stop_conditions": [
+      "금융 피해 위험 때문에 안전 확정 판정을 제공하지 않는다.",
+      "메시지는 민감 정보일 수 있으므로 저장하지 않는 흐름을 우선한다.",
+      "Android 권한, iOS 제약, 정책·개인정보를 확인한다."
+    ],
+    "open_questions": [
+      "고령층·일반 사용자 중 우선 대상은 누구인가?",
+      "위험 설명이 기존 KISA·보안 앱보다 실제 행동을 돕는가?"
+    ],
+    "source_urls": [
+      "https://app.notion.com/p/3d994f51302780be8c25cb15a6aa4f08",
+      "https://app.notion.com/p/3dc94f51302781f88e24f775e1058b4d",
+      "https://app.notion.com/p/3dc94f513027818ebaf7e55f03357895",
+      "https://app.notion.com/p/3de94f51302781349c79e9f642f9c85f"
+    ]
+  },
+  "notion_sources": [
+    {
+      "kind": "idea_page",
+      "title": "스미싱 의심 문자 탐지",
+      "url": "https://app.notion.com/p/3d994f51302780be8c25cb15a6aa4f08",
+      "content_markdown": "\n- 문자 → 감지 → 정상적인 문자인지 탐지하기 \n\n[01. 해결 방식·시장성 검증](https://app.notion.com/p/3dc94f51302781f88e24f775e1058b4d)\n[02. 유사 서비스·포지셔닝 검증](https://app.notion.com/p/3dc94f513027818ebaf7e55f03357895)\n[문제 상황·반복성 시장 검증](https://app.notion.com/p/3de94f51302781349c79e9f642f9c85f)\n"
+    },
+    {
+      "kind": "planning_page",
+      "title": "01. 해결 방식·시장성 검증",
+      "url": "https://app.notion.com/p/3dc94f51302781f88e24f775e1058b4d",
+      "content_markdown": "\n## 조사 결론\nKISA 보호나라가 이미 의심 문자의 스미싱 여부 확인·차단 안내를 제공한다. 단순 ‘문자 분류 앱’은 통신사·OS·보안 앱과 경쟁해야 한다.\n## 기존 해결 방식\n- 보호나라 스미싱 확인서비스와 신고·대응 가이드.\n- 통신사/단말의 스팸 필터 및 보안 앱.\n- 메신저의 신고·차단 기능.\n## 제안 방식과 시장성\n**사용자가 붙여넣은 문자에 대해 위험 문구·URL·사칭 주체를 근거와 함께 설명하고, 공식 확인/신고로 연결하는 교육형 도구**로 제한한다. 백그라운드 SMS 수집, 자동 차단, 악성 URL 확정은 제외한다.\n## 검증 조건\n- KISA 결과를 침해하지 않고 공식 채널로 보낸다.\n- 새 캠페인/난독화/다국어에서의 오탐·미탐을 별도 측정한다.\n- 금융피해 가능성이 있어 ‘안전’ 판정은 제공하지 않는다.\n## Sources\n[https://boho.or.kr/kr/subPage.do?menuNo=205116](https://boho.or.kr/kr/subPage.do?menuNo=205116)\n[https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000127&menuNo=205021&nttId=71544](https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000127&menuNo=205021&nttId=71544)\n## 독립 비판 검토 후 보완\nKISA 확인·신고 경로와 통신사/보안 앱이 존재한다. 백그라운드 문자 수집·자동 차단은 배제하고, 사용자가 붙여넣은 문자의 위험 근거 설명과 KISA 연결로 한정했다. ‘안전’ 확정 판정은 하지 않는다.\n- [KISA 스미싱 확인서비스](https://boho.or.kr/kr/subPage.do?menuNo=205116)\n- [Google Play SMS/통화기록 정책](https://support.google.com/googleplay/android-developer/answer/9047303)\n"
+    },
+    {
+      "kind": "planning_page",
+      "title": "02. 유사 서비스·포지셔닝 검증",
+      "url": "https://app.notion.com/p/3dc94f513027818ebaf7e55f03357895",
+      "content_markdown": "\n## 경쟁 지형\n- **KISA 보호나라**: 공적 확인·신고·대응 정보 제공.\n- **통신사/스팸 차단 앱**: 실시간 차단과 연락처 평판에 강함.\n- **보안 앱**: 악성 앱·URL 탐지와 단말 보호를 제공.\n## 차별화 가능한 포지셔닝\n**한국어 고령층/디지털 취약층용 ‘왜 위험한지’ 설명 인터페이스**. 분류 점수와 함께 기관 사칭, 보상 미끼, 앱 설치 유도, URL 패턴을 쉬운말로 보여 주고 118/KISA 경로를 제시한다.\n## 반증 가능성\n운영체제 권한 없이 사용성이 낮거나, 기존 앱이 설명까지 제공하면 차별성이 없다. 최신 사기·정상 문자로 정밀도뿐 아니라 설명 이해도와 신고 의도를 평가해야 한다.\n## Sources\n[https://boho.or.kr/kr/subPage.do?menuNo=205116](https://boho.or.kr/kr/subPage.do?menuNo=205116)\n[https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000127&menuNo=205021&nttId=71544](https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000127&menuNo=205021&nttId=71544)\n## 독립 비판 검토 후 보완\n독자적 분류기의 우월성은 최신·동의된 한국어 SMS와 적대적 URL 평가 없이는 주장할 수 없다. Android 권한, iOS 비접근성, PIPA상 민감한 메시지 보관, 미탐 피해가 선행 검증 조건이다.\n"
+    },
+    {
+      "kind": "planning_page",
+      "title": "문제 상황·반복성 시장 검증",
+      "url": "https://app.notion.com/p/3de94f51302781349c79e9f642f9c85f",
+      "content_markdown": "\n## 결론\n**문제 상황: 미흡 / 반복성: 부분 확인.**\n## 구체성\n현재 항목은 ‘문자→감지→정상인지 탐지’로만 적혀 있어 대상 사용자, 어떤 문자의 어떤 신호, 오판 시 피해, 현재 대안이 없다.\n**검증 가설:** 디지털 취약 사용자는 기관·보상·배송을 사칭하는 한국어 문자를 받을 때 URL/앱 설치/송금 유도 신호를 이해하지 못해 확인·신고를 반복적으로 미룬다.\n## 반복성 시장 근거\nKISA는 문자·메신저 등 여러 매체의 스미싱 확인 서비스를 운영하며, 스미싱 유포 증가와 개인 판단 의존 문제를 설명한다. 이는 캠페인성 사기가 반복되는 문제 범주임을 뒷받침한다. 다만 한 사용자가 반복해서 겪는 빈도와 기존 차단 서비스로 해결되지 않는 비율은 별도 확인이 필요하다.\n## 부족한 점\n- 대상(고령층, 일반 사용자 등)과 핵심 행동을 하나로 정할 것.\n- 최신 정상/악성 문자로 오탐·미탐과 설명 이해도를 함께 측정할 것.\n- KISA·통신사 차단을 사용하지 못하는 이유를 인터뷰로 확인할 것.\n## Sources\n- [KISA 스미싱 확인서비스](https://boho.or.kr/kr/subPage.do?menuNo=205116)\n- [KISA 스미싱 대응 가이드](https://www.boho.or.kr/kr/bbs/view.do?bbsId=B0000127&menuNo=205021&nttId=71544)\n"
+    }
+  ]
+}

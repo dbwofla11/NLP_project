@@ -1,0 +1,4 @@
+interface:
+  display_name: "Idea Problem Validation"
+  short_description: "Validate an idea's problem with evidence"
+  default_prompt: "Validate this idea's problem definition, recurring pain evidence, and existing alternatives, then create a sourced evaluation report."

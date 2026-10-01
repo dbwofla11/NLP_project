@@ -1,0 +1,70 @@
+{
+  "id": "immigration_admin_support",
+  "title": "외국인의 체류·행정 정보 이해 지원",
+  "source_url": "https://app.notion.com/p/3d994f513027806a8d1ce5e56549481a?pvs=204",
+  "analysis": { "status": "완료", "topic_fit": "중", "nlp_difficulty": "중", "market_competitiveness": "하" },
+  "target_users": ["외국인 유학생", "외국인 근로자"],
+  "problem": ["복잡한 체류·행정 용어", "기관별로 분산된 절차 정보", "기한·구비서류를 놓칠 위험"],
+  "validation": "체류자격·언어·실패 비용과 실제 문의 빈도 조사",
+  "limitations": ["규정 변경", "체류자격별 예외"],
+  "schema_version": 1,
+  "planning": {
+    "target_users": [
+      "대학의 외국인 유학생",
+      "공지문을 배포하는 대학·고용기관"
+    ],
+    "problem_definition": "체류 관련 안내문에서 기한·제출처·구비서류를 파악해 행동으로 옮기기 어렵다. 문제는 체류자격과 언어별로 다르고 사건 기반으로 발생한다.",
+    "final_scope": "기관이 배포한 공지문에서 언제·어디서·무엇을 할지 다국어 행동 카드로 추출하고 원문 링크와 1345 연결을 남긴다. 범용 FAQ, 자격 판정, 신청 대행은 제외한다.",
+    "alternatives": [
+      "1345 다국어 상담·안내",
+      "Hi Korea 전자민원·체류 정보",
+      "대학 국제처·지자체 안내",
+      "범용 번역·LLM"
+    ],
+    "validation_plan": [
+      "서로 다른 3개 기관 공지문에서 일정·서류·제출처 추출 재현율을 테스트한다.",
+      "특정 대학 유학생 10명에게 최근 3개월의 재확인·누락 사례를 조사하고 기관의 도입 의향을 확인한다."
+    ],
+    "risks_and_stop_conditions": [
+      "규정 원문과 갱신일을 표시하고 체류자격별 예외를 일반화하지 않는다.",
+      "1345와 충돌하면 공식 경로를 우선한다.",
+      "여권·외국인등록 정보 등 개인정보를 수집하지 않는다."
+    ],
+    "open_questions": [
+      "외국인 유학생과 근로자 중 첫 고객을 하나로 고정한다.",
+      "대학·고용기관이 공지 처리 도구를 도입할 의향이 있는가?"
+    ],
+    "source_urls": [
+      "https://app.notion.com/p/3d994f513027806a8d1ce5e56549481a",
+      "https://app.notion.com/p/3dc94f51302781f4a1ebede5275e9c65",
+      "https://app.notion.com/p/3dc94f51302781039cd8d66b4ec7285e",
+      "https://app.notion.com/p/3de94f51302781aa9d28f94c0490bf57"
+    ]
+  },
+  "notion_sources": [
+    {
+      "kind": "idea_page",
+      "title": "외국인의 체류·행정 정보 이해 문제",
+      "url": "https://app.notion.com/p/3d994f513027806a8d1ce5e56549481a",
+      "content_markdown": "\n### 문제 상황\n외국인 유학생과 근로자가 출입국·체류 관련 행정 안내문을 읽을 때 용어와 절차를 이해하기 어렵다.\n### 구체적인 문제\n- `체류자격`, `체류기간 연장`, `구비서류`, `출입국사실증명` 등의 용어가 어렵다.\n- 단어를 번역해도 언제, 어디서, 어떤 서류를 제출해야 하는지 알기 어렵다.\n- 필요한 정보가 출입국기관, 정부24, 지방자치단체 등에 흩어져 있다.\n- 신청 기간이나 준비 서류를 놓칠 가능성이 있다.\n- 한국의 행정 절차 자체가 익숙하지 않아 안내문을 읽고도 행동으로 옮기기 어렵다.\n- 행정문서의 표현이 일상적인 언어보다 복잡하다.\n### 문제의 근거\n- [법무부 외국인종합안내센터 1345](https://www.immigration.go.kr/immigration/1530/subview.do?utm_source=chatgpt.com)는 외국인을 대상으로 여러 언어의 출입국·체류 상담을 제공하고 있다.\n- [행정안전부 외국인주민 현황](https://www.mois.go.kr/cmm/fms/FileDown.do?atchFileId=FILE_00139621Dlr2oaT&fileSn=1&utm_source=chatgpt.com)은 국내 외국인주민이 많은 규모임을 보여준다.\n- [국립국어원 공공언어 개선 자료](https://www.korean.go.kr/front/calamity/calamityIntro.do?mn_id=275&utm_source=chatgpt.com)는 공공기관 안내문 등의 어려운 표현으로 인해 발생하는 정보 이해 문제를 다루고 있다.\n[01. 해결 방식·시장성 검증](https://app.notion.com/p/3dc94f51302781f4a1ebede5275e9c65)\n[02. 유사 서비스·포지셔닝 검증](https://app.notion.com/p/3dc94f51302781039cd8d66b4ec7285e)\n[문제 상황·반복성 시장 검증](https://app.notion.com/p/3de94f51302781aa9d28f94c0490bf57)\n"
+    },
+    {
+      "kind": "planning_page",
+      "title": "01. 해결 방식·시장성 검증",
+      "url": "https://app.notion.com/p/3dc94f51302781f4a1ebede5275e9c65",
+      "content_markdown": "\n## 조사 결론\n법무부 1345와 Hi Korea가 이미 다국어 체류·행정 정보를 제공한다. 새로운 ‘통합 안내 챗봇’은 공식 경로와 중복될 위험이 크다.\n## 기존 해결 방식\n- 1345는 20개 언어 상담·행정 안내를 제공한다.\n- Hi Korea는 전자민원·체류 정보의 공식 창구다.\n- 대학 국제처·지자체·민간 번역 앱은 현지 절차 보조를 제공한다.\n## 제안 방식과 시장성\n**공식 안내문을 ‘언제·어디서·무엇을’ 행동 카드로 재구성하는 다국어 문서 해설기**로 축소한다. 첨부 안내문을 읽어 마감일·기관·서류를 추출하고 원문 링크와 1345 연결을 남긴다. 자격 판정이나 신청 대행은 하지 않는다.\n## 검증 조건\n- 체류자격별 예외를 일반화하지 않는다.\n- 변경된 규정은 원문 갱신일과 함께 표시한다.\n- 1345와 충돌하면 1345 안내를 우선한다.\n## Sources\n[https://immigration.go.kr/moj/196/subview.do](https://immigration.go.kr/moj/196/subview.do)\n[https://www.hikorea.go.kr](https://www.hikorea.go.kr)\n## 독립 비판 검토 후 보완\n1345와 Hi Korea가 공식 다국어 안내·전자민원을 제공하므로 범용 FAQ 챗봇은 배제했다. 기관 공지문에서 일정·서류·제출처를 추출하고, 변경일과 1345 이관을 명시하는 보조 도구로 한정했다.\n- [법무부 1345](https://www.immigration.go.kr/moj/196/subview.do)\n"
+    },
+    {
+      "kind": "planning_page",
+      "title": "02. 유사 서비스·포지셔닝 검증",
+      "url": "https://app.notion.com/p/3dc94f51302781039cd8d66b4ec7285e",
+      "content_markdown": "\n## 경쟁 지형\n- **1345/Hi Korea**: 공식성·다국어 상담·전자민원이라는 강한 대체재.\n- **대학 국제처/지자체**: 대상 집단에 맞춘 안내를 제공.\n- **범용 번역/LLM**: 접근성은 높지만 절차 최신성과 책임이 취약하다.\n## 차별화 가능한 포지셔닝\n**대학·고용주가 배포한 공지문 전용 ‘행동 추출·쉬운말·다국어’ 도구**. 공식 포털을 대체하지 않고, 공지문에서 할 일을 놓치지 않게 한다.\n## 반증 가능성\n공지문 제공 주체의 B2B 도입 의향이 없거나, 1345/Hi Korea가 같은 형태의 맞춤 알림을 제공하면 중단한다. 3개 기관 공지로 일정·서류 추출 재현율을 테스트한다.\n## Sources\n[https://immigration.go.kr/moj/196/subview.do](https://immigration.go.kr/moj/196/subview.do)\n[https://www.hikorea.go.kr](https://www.hikorea.go.kr)\n## 독립 비판 검토 후 보완\n체류자격별 예외·규정 변경·여권/외국인등록증 개인정보가 핵심 위험이다. 따라서 ‘자격 판정/신청 대행’이나 정답형 답변을 하지 않고 공지문 근거·공식 경로를 보존한다.\n"
+    },
+    {
+      "kind": "planning_page",
+      "title": "문제 상황·반복성 시장 검증",
+      "url": "https://app.notion.com/p/3de94f51302781aa9d28f94c0490bf57",
+      "content_markdown": "\n## 결론\n**문제 상황: 부분 충족 / 반복성: 부분 확인.**\n## 구체성\n외국인 유학생·근로자, 체류자격/연장/구비서류, 기관·기한을 이해하기 어려운 상황이 제시되어 있다. 반면 어떤 체류자격·언어·행정 절차에서 가장 자주 막히는지, 잘못 이해했을 때의 비용은 없다.\n**검증 가설:** 특정 대학의 외국인 유학생은 체류 연장·변경 공지에서 제출기한·서류·기관을 여러 번 확인한다.\n## 반복성 시장 근거\n법무부 1345가 20개 언어로 체류·생활 안내를 제공하는 것은 다국어 행정정보 수요의 시장 신호다. 체류 연장/신고는 개인별로 사건 기반이며, 일반적인 ‘상시 FAQ’가 아니라 기한·자격 변화 때 반복되는 문제로 보는 것이 정확하다.\n## 부족한 점\n- 유학생/근로자와 체류자격을 하나로 고정할 것.\n- 1345·Hi Korea로 해결되지 않는 구체 공지문을 수집할 것.\n- 10명 사용자에게 최근 3개월 문의·누락·재확인 사례를 조사할 것.\n## Sources\n- [법무부 1345 외국인종합안내센터](https://www.immigration.go.kr/moj/196/subview.do)\n- [Hi Korea](https://www.hikorea.go.kr)\n"
+    }
+  ]
+}

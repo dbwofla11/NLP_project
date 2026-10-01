@@ -18,3 +18,24 @@
 | AI 답변 재사용 가능성 판정 | 시작 전 · 하 · 하 | 문제 정의, 반복성, 한계점 검토를 시작해야 함. |
 
 모든 후보는 구현 전에 사용자 인터뷰를 통해 문제의 반복성·피해·기존 대안의 한계를 확인하고, 그 결과에 맞춰 자연어 처리 기법을 선택합니다.
+
+## 파일 구성
+
+각 번호는 같은 이름의 Markdown 문서와 JSON 데이터를 한 쌍으로 가집니다. JSON은 이후 HTML 뷰어에서 제목, 평가, 문제, 제안 솔루션, 검증 과제, 한계를 표시하는 원본 데이터로 사용합니다.
+
+- [01 인스타그램 사칭 계정 대응](01_instagram_impersonation.md)
+- [02 최신 세법 정보 이해 지원](02_tax_law_guidance.md)
+- [03 부동산 계약 이해 지원](03_rental_contract_support.md)
+- [04 체류·행정 정보 이해 지원](04_immigration_admin_support.md)
+- [05 소방용품 사칭·미인증 거래 대응](05_fire_product_fraud.md)
+- [06 스미싱 의심 문자 탐지](06_smishing_detection.md)
+- [07 낚시성 뉴스 제목 탐지](07_clickbait_news.md)
+- [08 스마트 버스정류장 알리미](08_smart_bus_stop.md)
+- [09 근거 기반 사업계획서 검증·공동작성](09_startup_plan_validation.md)
+- [10 멀티모달 협업 공유 공간](10_collaboration_workspace.md)
+- [11 스포츠 영상 자동 해설](11_sports_video_commentary.md)
+- [12 AI 답변 재사용 가능성 판정](12_ai_answer_reuse.md)
+
+## 전체 기획과 HTML용 JSON
+
+각 아이디어 문서에는 통합 기획과 연결된 Notion 페이지 본문을 보존했습니다. 같은 이름의 JSON에는 HTML 뷰어용 공통 planning 구조와 출처 본문 배열(notion_sources)이 있습니다. 초기 제안과 독립 검토 뒤의 피벗은 출처별로 기록했습니다.

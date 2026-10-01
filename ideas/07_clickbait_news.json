@@ -1,0 +1,68 @@
+{
+  "id": "clickbait_news",
+  "title": "낚시성 뉴스 제목 탐지",
+  "source_url": "https://app.notion.com/p/3d994f5130278076a1b8cd6bb04689b1?pvs=204",
+  "analysis": { "status": "완료", "topic_fit": "상", "nlp_difficulty": "상", "market_competitiveness": "하" },
+  "problem": ["제목과 본문의 불일치", "과도하게 관심을 끄는 제목으로 인한 정보 오도"],
+  "proposed_solution": "제목과 본문을 비교해 낚시성 가능성을 판정",
+  "validation": "판정 라벨 기준, 사용자 불편 빈도, 기존 대안 조사",
+  "limitations": ["저작권", "라벨 기준", "시간 변화에 따른 성능 저하"],
+  "schema_version": 1,
+  "planning": {
+    "target_users": [
+      "한국어 뉴스 소비자"
+    ],
+    "problem_definition": "제목이 본문의 핵심 주체·행동·정보와 어긋나 불필요한 클릭이나 오해가 생길 수 있지만, 사용자 피해 빈도와 판정 기준은 아직 검증되지 않았다.",
+    "final_scope": "제목-본문 불일치 가능성과 근거 문장을 표시하고 중립적인 제목 대안을 제안한다. 매체 신뢰도나 허위 뉴스로 단정하지 않는다.",
+    "alternatives": [
+      "클릭베이트 탐지·차단·재작성 확장과 연구",
+      "NewsGuard의 매체 단위 신뢰도 라벨",
+      "뉴스 앱의 추천·개인화"
+    ],
+    "validation_plan": [
+      "한국어 제목·본문 라벨 데이터 사용 조건을 확인하고 2인 이상 주석 일치도, entailment 정확도, 시간·매체 편향을 평가한다.",
+      "사용자 20명에게 최근 1주 클릭 사례를 조사하고 이해도·시간·오해 감소 중 핵심 성과를 사전 선택한다."
+    ],
+    "risks_and_stop_conditions": [
+      "저작권·크롤링·매체 API 범위를 확인한다.",
+      "‘낚시성’, ‘허위’, ‘제목-본문 불일치’를 구분한다.",
+      "재서술이 원문 의미를 바꾸지 않는지 검토한다."
+    ],
+    "open_questions": [
+      "사용자 문제를 불필요한 클릭과 오해 중 무엇으로 정의할지 정한다.",
+      "언론학 검토와 라벨 기준에 합의할 수 있는가?"
+    ],
+    "source_urls": [
+      "https://app.notion.com/p/3d994f5130278076a1b8cd6bb04689b1",
+      "https://app.notion.com/p/3dc94f5130278129b4e6f028c9894adf",
+      "https://app.notion.com/p/3dc94f513027818dab01e0665b58c542",
+      "https://app.notion.com/p/3de94f513027816f8085d324835c4a45"
+    ]
+  },
+  "notion_sources": [
+    {
+      "kind": "idea_page",
+      "title": "낚시성 뉴스 제목 탐지",
+      "url": "https://app.notion.com/p/3d994f5130278076a1b8cd6bb04689b1",
+      "content_markdown": "\n- 본문과 다른 어그로 끌리는 뉴스 제목을 걸러내는 역활을 하자.\n- 예시) 제목-김종국 이혼: 김종국이 이혼에 대한 이야기에 대한 성향을 이야기 하였다.  \n\n[01. 해결 방식·시장성 검증](https://app.notion.com/p/3dc94f5130278129b4e6f028c9894adf)\n[02. 유사 서비스·포지셔닝 검증](https://app.notion.com/p/3dc94f513027818dab01e0665b58c542)\n[문제 상황·반복성 시장 검증](https://app.notion.com/p/3de94f513027816f8085d324835c4a45)\n"
+    },
+    {
+      "kind": "planning_page",
+      "title": "01. 해결 방식·시장성 검증",
+      "url": "https://app.notion.com/p/3dc94f5130278129b4e6f028c9894adf",
+      "content_markdown": "\n## 조사 결론\n클릭베이트 탐지·제목 재작성 브라우저 확장은 이미 연구와 오픈소스 제품이 존재한다. 제목만 보고 ‘거짓 뉴스’라고 판정하면 부정확하고 명예 훼손 위험이 있다.\n## 기존 해결 방식\n- 클릭베이트 분류·차단 브라우저 확장 연구.\n- 제목을 중립적으로 재작성하는 오픈소스/확장.\n- NewsGuard 같은 서비스의 매체 신뢰도 라벨(제목 판정과는 다름).\n## 제안 방식과 시장성\n**기사 본문과 제목의 정보 일치도·누락된 핵심 주체/행동을 보여주는 한국어 뉴스 리더 도구**로 한정한다. ‘낚시성 확정’ 대신 ‘제목-본문 불일치 가능성’과 근거 문장을 표시하고, 중립 제목 대안을 제안한다.\n## 검증 조건\n- 매체 비방이 아닌 문장 수준의 설명 가능 점수로 제한한다.\n- 제목만 분류한 점수와 본문 대조 점수를 분리한다.\n- 기사 저작권·크롤링 허용 범위를 준수한다.\n## Sources\n[https://arxiv.org/abs/1610.09786](https://arxiv.org/abs/1610.09786)\n[https://chromewebstore.google.com/detail/newsguard/hcgajcpgaalgpeholhdooeddllhedegi](https://chromewebstore.google.com/detail/newsguard/hcgajcpgaalgpeholhdooeddllhedegi)\n[https://github.com/javichur/clickbait-fixer-chrome-extension](https://github.com/javichur/clickbait-fixer-chrome-extension)\n## 독립 비판 검토 후 보완\n제목-본문 불일치는 명확한 NLP 과제이며 AI-Hub에 한국어 제목·본문·문장 수준 정합성 라벨 데이터가 있다. 단 ‘불일치 위험’은 허위·저질 기사 판정이 아니다. 데이터 사용조건과 시간/매체 편향을 별도 평가한다.\n- [AI-Hub 낚시성 기사 데이터](https://www.aihub.or.kr/aihubdata/data/view.do?aihubDataSe=data&currMenu=511&dataSetSn=71338&topMenu=100)\n"
+    },
+    {
+      "kind": "planning_page",
+      "title": "02. 유사 서비스·포지셔닝 검증",
+      "url": "https://app.notion.com/p/3dc94f513027818dab01e0665b58c542",
+      "content_markdown": "\n## 경쟁 지형\n- **클릭베이트 확장·연구**: 탐지, 경고, 제목 재작성까지 이미 구현.\n- **NewsGuard**: 매체의 신뢰·투명성 평가를 제공하지만 개별 제목 판정과는 다름.\n- **뉴스 앱**: 개인화·추천이 주 기능이며 제목-본문 정합성 설명은 제한적이다.\n## 차별화 가능한 포지셔닝\n**한국어 뉴스의 제목-본문 정합성 + 설명 가능한 중립 재서술**. 단일 이진 분류가 아니라, 누락·과장·호기심 유발 표현의 근거를 본문 문장과 연결한다.\n## 반증 가능성\n한국어 라벨 데이터의 기준 합의가 없거나 재서술이 원문 의미를 바꾸면 실패한다. 2인 이상 주석 일치도, 제목-본문 entailment 정확도, 언론학 검토를 사전 조건으로 둔다.\n## Sources\n[https://arxiv.org/abs/1610.09786](https://arxiv.org/abs/1610.09786)\n[https://chromewebstore.google.com/detail/newsguard/hcgajcpgaalgpeholhdooeddllhedegi](https://chromewebstore.google.com/detail/newsguard/hcgajcpgaalgpeholhdooeddllhedegi)\n[https://github.com/javichur/clickbait-fixer-chrome-extension](https://github.com/javichur/clickbait-fixer-chrome-extension)\n## 독립 비판 검토 후 보완\n실시간 기사 수집·표시는 저작권, robots, 매체 API를 확인해야 한다. 결과는 매체 비방이 아닌 제목-본문 근거 문장과 중립 재서술로 제시하고, 라벨 기준·이의제기 절차를 설계한다.\n- [저작권법](https://www.law.go.kr/LSW/lsInfoP.do?lsiSeq=283335)\n"
+    },
+    {
+      "kind": "planning_page",
+      "title": "문제 상황·반복성 시장 검증",
+      "url": "https://app.notion.com/p/3de94f513027816f8085d324835c4a45",
+      "content_markdown": "\n## 결론\n**문제 상황: 미흡 / 반복성: 부분 확인.**\n## 구체성\n현재 설명은 ‘본문과 다른 어그로 제목’과 예시뿐이다. 누가 어떤 뉴스 소비 상황에서 시간을 잃거나 오해하는지, 제목-본문 불일치를 무엇으로 판정하는지, 현재 대안이 없는지가 빠져 있다.\n**검증 가설:** 한국어 뉴스 소비자는 포털/소셜 피드에서 제목을 보고 기사를 열 때, 제목이 본문 핵심 정보와 불일치해 불필요한 클릭 또는 오해를 경험한다.\n## 반복성 시장 근거\n클릭베이트 탐지·차단 브라우저 확장 연구와 뉴스 신뢰도 도구가 존재하고, AI-Hub가 한국어 낚시성 기사 데이터셋을 제공하는 것은 제목 품질/정합성 문제가 반복 연구·제품 과업임을 뒷받침한다. 그러나 한국 이용자의 실제 불편 빈도와 도구 지불 의사는 확인되지 않았다.\n## 부족한 점\n- ‘낚시성’, ‘허위’, ‘제목-본문 불일치’를 구분해 라벨 기준을 작성할 것.\n- 사용자 20명에게 최근 1주 뉴스 클릭 사례로 불일치 경험을 조사할 것.\n- 문제 성과를 클릭 절감이 아니라 이해도·시간·오해 감소 중 하나로 정할 것.\n## Sources\n- [AI-Hub 낚시성 기사 데이터](https://www.aihub.or.kr/aihubdata/data/view.do?aihubDataSe=data&currMenu=511&dataSetSn=71338&topMenu=100)\n- [Stop Clickbait 연구](https://arxiv.org/abs/1610.09786)\n"
+    }
+  ]
+}
